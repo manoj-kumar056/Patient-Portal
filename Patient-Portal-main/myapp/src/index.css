@@ -1,0 +1,881 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Scrollbar design */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  width: 5px;
+  box-shadow: inset 1px 1px 3px #6666;
+}
+::-webkit-scrollbar-thumb{
+  width: 5px;
+  background: #065cb8; 
+  border-radius: 5px;
+  transition: 1s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #4b91db; 
+}
+
+/* Navbar */
+.navBar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  color: #fff;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 3px 1px #d2d1d1;
+  z-index: 2;
+}
+.navBar .logo{
+  width: 200px;
+  height: 150px;
+  background: url('./images/Logo.png') no-repeat;
+  background-size: 100%;
+}
+.navBar .nav{
+  list-style-type: none;
+  margin-right: 20px;
+}
+.nav a{
+  color: #065cb8;
+  font-weight: bold;
+  margin: 30px 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: .2s;
+
+}
+.nav a:hover,.nav a.active{
+  color: white;
+  letter-spacing: 1px;
+  background: #065cb8;
+  border-radius: 20px;
+}
+/* Footer */
+.Footer{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+  width: calc(100% - 20px);
+  gap: 20px;
+  height: 250px;
+  background-color: #065cb8;
+  color: #fff;
+}
+.Footer .address1{
+  width: 40%;
+  padding: 10px;
+  text-align: left;
+}
+.Footer .address2 h2{
+  padding: 0px 20px;
+}
+.Footer .address2 p{
+  padding: 0px 10px;
+}
+.Footer .address2{
+  width: 40%;
+  padding: 10px;
+  text-align: left;
+}
+.Footer .address2 a{
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+/* Error Page */
+.ErrorBg{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ErrorBg .img-container{
+  width: 500px;
+  height: 350px;
+  background: url('./images/404Error.gif') no-repeat;
+  background-size: 100% 100%;
+}
+.ErrorBg button{
+  padding: 10px 15px;
+  border: none;
+  background: #065cb8;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: .4s;
+  box-shadow: 1px 1px 2px #999;
+}
+.ErrorBg button:hover{
+  opacity: .8;
+  box-shadow: 1px 1px 3px #999;
+}
+
+/* Home */
+.home-container{
+  width:100%;
+  height: 100vh;
+  background: url("./images/BackGroundImage.jpeg") no-repeat;
+  background-size: 100% 100%;
+}
+.home-container .Main{
+  padding: 15px 30px;
+  position: relative;
+}
+.home-container .Main .MainPara{
+  margin-top: 100px;
+  padding: 30px;
+  text-align: left;
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  border: white;
+  background: rgba(255,255,255,0.7);
+}
+.home-container .Main .MainPara h2{
+  margin-top: 70px;
+  color: #222;
+  font-size: 30px;
+  padding: 20px;
+}
+.home-container .Main .MainPara span{
+  color: #333;
+  font-size: 20px;
+  padding: 15px 20px;
+}
+.home-container .Main .MainPara p{
+  color: #222;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+/* Service */
+.Service{
+  width: 100%;
+  height: 1000px;
+  padding: 120px 20px;
+  background: #fff;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Service .head{
+  position: relative;
+  padding: 10px;
+  background: #fff;
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px #5555;
+  border: 1px solid #5555;
+  overflow: hidden;
+}
+.Service .head .img{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+.Service .head .img1{
+  background: url("./images/blood-donation.png");
+  background-size: 100% 100%;
+}
+.Service .head .img2{
+  background: url("./images/nutrients.jpg");
+  background-size: 100% 100%;
+}
+.Service .head .img3{
+  background: url("./images/diet.jpg");
+  background-size: 100% 100%;
+}
+.Service .head .img4{
+  background: url("./images/parmacy.jpg");
+  background-size: 100% 100%;
+}
+.Service .head h2{
+  padding: 5px 30px;
+}
+.Service .head p{
+  padding: 10px 30px;
+}
+
+/* About */
+.About{
+  height: 1500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.About .container{
+  position: relative;
+  width: 500px;
+  padding: 20px 30px;
+  height: 500px;
+  color: #111;
+  text-align: left;
+  background: #fff;
+}
+
+.About .container h1{
+  text-transform: uppercase;
+  padding: 30px 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.About .container p{
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400p;
+}
+.About .img-container{
+  position: relative;
+  margin-top: 120px;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px #3333;
+  background: url('./images/hospital.jpg');
+}
+/* Contact */
+.Contact{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 1000px;
+}
+.Contact .container{
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  width: 500px;
+  padding: 20px 30px;
+  height: 400px;
+  color: #111;
+  text-align: left;
+  border: 1px solid #3333;
+  box-shadow: 2px 2px 3px #3333;
+  border-radius: 10px;
+  background: #fff;
+}
+.Contact .container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Contact .container form h1{
+  text-transform: uppercase;
+  color: #065cb8;
+}
+.Contact .container input{
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #555;
+  outline: none;
+  border-radius: 5px;
+}
+.Contact .container textarea{
+  padding: 10px 15px;
+  width: 250px;
+  height: 200px;
+  border: 1px solid #555;
+  outline: none;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.Contact .container button{
+  width: 250px;
+  padding: 10px 15px;
+  border: none;
+  background: #065cb8;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: .4s;
+  box-shadow: 1px 1px 2px #999;
+}
+.Contact .container button:hover{
+  opacity: .8;
+  box-shadow: 1px 1px 3px #999;
+}
+.Contact .img-container{
+  position: relative;
+  display: none;
+  margin-left: 100px;
+  width: 500px;
+  height: 500px;
+  background: url('./images/contact.png') no-repeat;
+  background-size: 350px 350px;
+}
+.Suggessions{
+  padding: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.Suggessions .fade-container {
+  width: 300px; 
+  height: 100px; 
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #6666;
+  border: 1px solid #6666;
+}
+
+.Suggessions .fade-text{
+  width: 88%;
+  padding: 10px 5px;
+  margin: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.Suggessions h2{
+  font-size: 14px;
+  text-align: left;
+  padding: 0px 20px;
+}
+.Suggessions .fade-text{
+  padding: 0px 20px;
+  font-size: 10px;
+  text-align: justify;
+  font-weight: 600;
+}
+.Suggessions .transparentGlass{
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(transparent,#ffff 95%);
+  width: 100%;
+  height: 30px;
+}
+
+/* Login Page */
+.Login{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+}
+.Login .container{
+  position: relative;
+  display: flex;
+  width: 400px;
+  padding: 10px 30px;
+  height: 400px;
+  color: #111;
+  text-align: left;
+  border: 1px solid #3333;
+  box-shadow: 2px 2px 3px #3333;
+  border-radius: 10px;
+  background: #fff;
+}
+.Login .container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Login .container form h1{
+  text-transform: uppercase;
+  color: #065cb8;
+}
+.Login .container input{
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #555;
+  outline: none;
+  border-radius: 5px;
+}
+.Login .container button{
+  width: 280px;
+  padding: 10px 15px;
+  border: none;
+  background: #065cb8;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: .4s;
+  box-shadow: 1px 1px 2px #999;
+}
+.Login .container button:hover{
+  opacity: .8;
+  box-shadow: 1px 1px 3px #999;
+}
+
+/* Signup Page */
+.Signup{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  padding: 100px 0px;
+}
+.Signup .container{
+  position: relative;
+  top: 50px;
+  display: flex;
+  width: 400px;
+  padding: 10px 30px;
+  height: fit-content;
+  color: #111;
+  text-align: left;
+  border: 1px solid #3333;
+  box-shadow: 2px 2px 3px #3333;
+  border-radius: 10px;
+  background: #fff;
+}
+.Signup .container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.Signup .container form h1{
+  text-transform: uppercase;
+  color: #065cb8;
+}
+.Signup .container input{
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #555;
+  outline: none;
+  border-radius: 5px;
+}
+.Signup .container button{
+  width: 280px;
+  padding: 10px 15px;
+  border: none;
+  background: #065cb8;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: .4s;
+  box-shadow: 1px 1px 2px #999;
+}
+.Signup .container button:hover{
+  opacity: .8;
+  box-shadow: 1px 1px 3px #999;
+}
+
+/* DashBoard */
+.DashBoard{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: block;
+}
+.DashBoard .navBar{
+  position: sticky;
+  top: 100px;
+  padding: 3px 15px;
+  justify-content: start;
+  gap: 20px;
+  z-index: 1;
+  height: 40px;
+  border-radius: 0px;
+  box-shadow: 0px 1px 1px #6666;
+}
+.DashBoard .navBar a{
+  font-size: 12px;
+  padding: 13px 20px;
+  color: #065cb8;
+  font-weight: bold;
+}
+.DashBoard .navBar a:hover{
+  background: rgba(1,1,1,0.1);
+  border-bottom: 3px solid #065cb8;
+}
+.DashBoard .navBar a .active{
+  border-bottom: 3px solid #065cb8;
+}
+.DashBoard .navBar button{
+  background: #065cb8;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #6666;
+}
+.DashBoard .navBar button:hover{
+  opacity: .8;
+}
+
+/* Dashboard details */
+.dashboradDetails{  
+  position: relative;
+  width: 100%;
+  height: min(100vh);
+  text-align: center;
+  background: #fff;
+}
+.dashboradDetails .container{
+  margin-top: 100px;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.container .report{
+  width: 100%;
+  height: fit-content;
+  border: 1px solid #6666;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #6666;
+  line-height: 5px;
+  overflow: hidden;
+}
+.container .report .Top{
+  display: flex;
+  justify-content: space-between;
+}
+.container .report .Top span:nth-child(1){
+  width: fit-content;
+  height: fit-content;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+.container .report .Top span:nth-child(2){
+  font-size: 14px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #555;
+}
+.container .report .description{
+  text-align: left;
+  padding: 0px 0px 10px 20px;
+}
+
+/* Doctor UI */
+.Container{
+  background: #fff;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+}
+.Container form{
+  position: relative;
+  top: 50px;
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 40px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #6666;
+  border: 1px solid #6666;
+}
+.Container form input{
+  width: 200px;
+  padding: 10px 15px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: .4s;
+}
+.Container form select{
+  width: 230px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+.Container form .input-box{
+  display: flex;
+  flex-direction: column;
+}
+.Container form span{
+  position: relative;
+  width: fit-content;
+  bottom: 50px;
+  left: 10px;
+  background: #fff;
+  padding: 2px 10px;
+  font-size: 10px;
+  border-radius: 10px;
+  transition: .4s;
+}
+.Container form input:focus ~span{
+  color: #065cb8; 
+}
+
+.Container form input:focus{
+  border: 1px solid #065cb8;
+}
+.Container form button{
+  border: none;
+  background: #065cb8;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #6666;
+}
+.Container table{
+  position: relative;
+  top: 100px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 100px;
+}
+.Container table th{
+  padding: 10px 20px;
+  background: #065cb8;
+  border: 1px solid #aaa;
+  color: #fff;
+}
+.Container table td{
+  border: 1px solid #555;
+  padding: 10px 20px;
+}
+.Container table td .btns{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.Container table td .btns button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.Container table td .btns button:nth-child(1){
+  background: #3d9212;
+}
+.Container table td .btns button:nth-child(2){
+  background: #ff1100;
+}
+
+.popup{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100vh;
+  transition: .4s;
+  z-index: 1000;
+}
+.popup form{
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 40px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #6666;
+}
+popup form input{
+  width: 200px;
+  padding: 10px 15px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: .4s;
+}
+.popup form .input-box{
+  display: flex;
+  flex-direction: column;
+}
+.popup form span{
+  position: relative;
+  width: fit-content;
+  bottom: 50px;
+  left: 10px;
+  background: #fff;
+  padding: 2px 10px;
+  font-size: 10px;
+  border-radius: 10px;
+  transition: .4s;
+}
+.popup form input:focus ~span{
+  color: #065cb8;
+}
+
+.popup form input:focus{
+  border: 1px solid #065cb8;
+}
+.popup form .btns button{
+  border: none;
+  background: #065cb8;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #6666;
+}
+.popup form .btns{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Animations */
+@keyframes fadeLeft{
+  from{
+      opacity: 0.2;
+      right: 200px;
+  }
+  to{
+      opacity: 1;
+      right: 0px;
+  }  
+}
+
+@keyframes fadeRight{
+  from{
+      opacity: 0.2;
+      left: 200px;
+  }
+  to{
+      opacity: 1;
+      left: 0px;
+  }  
+}
+
+@keyframes fadeTop{
+  from{
+      opacity: 0.2;
+      bottom: 200px;
+  }
+  to{
+      opacity: 1;
+      bottom: 0px;
+  }  
+}
+
+@keyframes fadeBottom{
+  from{
+      opacity: 0.2;
+      top: 200px;
+  }
+  to{
+      opacity: 1;
+      top: 0px;
+  }  
+}
+
+@keyframes fade{
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }  
+}
+.fade{
+  animation: fade 1.5s ease-out;
+}
+.fadeLeft{
+  animation: fadeLeft 1.5s ease-out;
+}
+.fadeRight{
+  animation: fadeRight 1.5s ease-out;
+}
+.fadeTop{
+  animation: fadeTop 1.5s ease-out;
+}
+.fadeBottom{
+  animation: fadeBottom 1.5s ease-out;
+}
+
+
+
+
+/* For mobile and taplet */
+@media screen and (min-width:800px){
+  .Service{
+    height: 100vh;
+    padding: 20px;
+  }
+  .About{
+    height: 100vh;
+  }
+  .About .container{
+    margin-top: 120px;
+  }
+  .Contact{
+    height: 100vh;
+  }
+  .Contact .img-container{
+    display: block;
+    margin-left: 100px;
+    margin-top: 200px;
+  }
+  .dashboradDetails .container .report{
+    width: 49%;
+  }
+}
